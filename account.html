@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Compte JS</title>
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body class="bg" onload="checkiflogged()">
+        <header>
+            <nav class="navbar" id="NavBar" style="background-color: black !important">
+                <a class="logo" href="#">Arès</a>
+                <ul class="nav-links">
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="menu">
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="#" onclick="Logout();">Logout</a></li>
+                </div>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about" style="padding: 18%; margin: auto; color: white; font-size:25px; margin-left:8%;">
+                <div >
+                    <h2>Account</h2>
+                    <hr><br>
+                    <h4>Username: <script>document.write(localStorage.getItem('username'));</script></h4>
+                    <h4>Password: <script>document.write(localStorage.getItem('password'));</script></h4>
+                    <h4>Email: <script>document.write(localStorage.getItem('email'));</script></h4>
+                    <button onclick="DeleteAccount();">Delete account</button>
+                </div>
+            </section>
+            <button onclick="upFunction()" id="upBtn" title="Up"><img href="#" class="btnImg" src="img/up.png" alt="Remonter"></button>
+        </main>
+        <footer id="footer" class="footer showcontent" style="display: block;">
+            <p>Powered by: <a href="https://github.com/Xaedraz" target="_blank" class="underline">Arès</a></p>
+        </footer>
+    </body>
+</html>

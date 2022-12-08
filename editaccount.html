@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit</title>
+        <link rel="stylesheet" href="../Style/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="../img/focus-4k.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="" class="logo">Arès</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="../page1/index.html">Home</a></li>
+                <li><a href="../page2/index.html">About</a></li>
+                <li><a href="../page3/index.html">News</a></li>
+                <li><a href="../page4/index.html">Doc</a></li>
+                <li><a href="../page5/index.html">Contact</a></li>
+            </ul>
+        </header>
+        <main>
+            <section id="about" class="account">
+                <div>
+                    <h2>Edit Account</h2>
+                    <hr><br>
+                    <h4>New Username: <input style="font-size:25px;" type="text" id="newusername" name="newusername"></h4>
+
+                    <br>
+                    <h4>New Password: <input style="font-size:25px;" type="text" id="newpassword" name="newpassword"></h4>
+
+                    <br>
+                    <h4>New Email: <input style="font-size:25px;" type="text" id="newemail" name="newemail"></h4>
+                    <script>
+                        document.getElementById("newusername").value = localStorage.getItem('username');
+                        document.getElementById("newpassword").value = localStorage.getItem('password');
+                        document.getElementById("newemail").value = localStorage.getItem('email');
+                    </script>
+                    <br>
+                    <button onclick="UpdateAccount();" style="float: left;">Save account</button>
+                    <li><a href="../compte/index.html" style="float: left;">Cancel</a></li>
+                    <button onclick="DeleteAccount();" style="float: right;">Delete account</button>
+                </div>
+            </section>
+            <button onclick="upFunction()" id="upBtn" title="Up"><img  class="btnImg" src="../img/up.png" alt="Remonter"></button>
+        </main>
+        <footer id="footer" class="footer">
+            <p>©2022 Copyright: Arès</p>
+        </footer>
+        <script src="../JS/script.js"></script>
+    </body>
+</html>
