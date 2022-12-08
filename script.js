@@ -39,7 +39,7 @@ function login(){
 
 function Logout(){
     localStorage.removeItem('logged');
-    window.location.href="login.html";
+    window.location.href="index.html";
 }
 
 function DeleteAccount(){
