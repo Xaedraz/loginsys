@@ -68,6 +68,6 @@ function checkiflogged(){
     let loggedin = localStorage.getItem('logged');
     if(loggedin == null){
       alert("Veuillez vous connecter avant d'accéder a cette page");
-      window.location.href="register.html";
+      window.location.href="login.html";
     }
 }
